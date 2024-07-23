@@ -8,6 +8,22 @@
     <style>
         /* Your custom styles here */
     </style>
+    <script>
+        // Örnek JavaScript kodu
+        document.addEventListener('DOMContentLoaded', function() {
+            const audioPlayers = document.querySelectorAll('audio');
+
+            audioPlayers.forEach(player => {
+                player.addEventListener('play', function() {
+                    audioPlayers.forEach(otherPlayer => {
+                        if (otherPlayer !== player && !otherPlayer.paused) {
+                            otherPlayer.pause();
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 </head>
 <body class="bg-gray-100">
 <div class="container mx-auto p-4">

@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Artist;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -12,6 +13,17 @@ class ArtistSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        $artists = [
+            ['name' => 'Michael Jackson'],
+            ['name' => 'Madonna'],
+            ['name' => 'Eminem'],
+            ['name' => 'Daft Punk'],
+
+        ];
+
+
+        foreach ($artists as $artist) {
+            Artist::create($artist);
+        }
     }
 }
