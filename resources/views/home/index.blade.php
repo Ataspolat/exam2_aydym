@@ -41,7 +41,7 @@
         <div class="bg-white shadow-md rounded-lg p-4">
             <h2 class="text-lg font-semibold">Müzik Adı 1</h2>
             <audio controls class="mt-2">
-                <source src="muzik1.mp3" type="audio/mpeg">
+                <source src="public/music/Modern_Talking_-_Cheri_Cheri_Lady_(2013).mp3" type="audio/mpeg">
                 Tarayıcınız audio etiketini desteklemiyor.
             </audio>
         </div>

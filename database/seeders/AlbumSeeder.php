@@ -2,8 +2,8 @@
 
 namespace Database\Seeders;
 
-use App\Models\Album;
 use App\Models\Artist;
+use App\Models\Album;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -14,15 +14,33 @@ class AlbumSeeder extends Seeder
      */
     public function run(): void
     {
-        $albums = [
-            'album1',
-            'album2',
-            'album3',
-            'album4',
+        $artists = [
+            ['name' => 'Michael Jackson', 'albums' => [
+                'MacBook Air', 'MacBook Pro', 'iMac',
+            ]],
+            ['name' => 'Madonna', 'albums' => [
+                'TUF', 'ROG', 'Zenbook', 'Vivobook',
+            ]],
+            ['name' => 'Eminem', 'albums' => [
+                'Predator', 'Nitro', 'Aspire', 'Swift',
+            ]],
+            ['name' => 'Ceza', 'albums' => [
+                'ThinkPad', 'Yoga', 'LOQ', 'IdeaPad',
+            ]],
         ];
+        for ($i = 0; $i < count($artists); $i++) {
+            $a = Artist::create([
+                'name' => $artists[$i]['name'],
 
-        foreach ($albums as $album) {
-            Album::create(['name' =>  $album,]);
+            ]);
+
+            for ($j = 0; $j < count($artists[$i]['albums']); $j++) {
+                Album::create([
+                    'artist_id' => $a->id,
+                    'name' => $artists[$i]['albums'][$j],
+
+                ]);
+            }
         }
     }
 }

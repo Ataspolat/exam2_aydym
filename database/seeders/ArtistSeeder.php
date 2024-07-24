@@ -2,9 +2,9 @@
 
 namespace Database\Seeders;
 
-use App\Models\Artist;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Artist;
 
 class ArtistSeeder extends Seeder
 {
@@ -14,6 +14,7 @@ class ArtistSeeder extends Seeder
     public function run(): void
     {
         $artists = [
+
             'Michael Jackson',
             'Madonna',
             'Eminem',
@@ -25,5 +26,6 @@ class ArtistSeeder extends Seeder
         foreach ($artists as $artist) {
             Artist::create(['name' =>  $artist]);
         }
+
     }
 }

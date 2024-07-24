@@ -29,6 +29,7 @@ class SongFactory extends Factory
             'album_id' => $album,
             'artist_id' => $artist,
             'genre_id' => $genre,
+
         ];
     }
 }
