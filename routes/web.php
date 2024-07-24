@@ -4,7 +4,10 @@ use App\Http\Controllers\Controller;
 use App\Http\Controllers\SongController;
 use Illuminate\Support\Facades\Route;
 
-
+Route::controller(HomeController::class)
+    ->group(function () {
+        Route::get('', 'index')->name('home');
+    });
 
 
 //Route::get('', 'index')->name('index'); // all objects

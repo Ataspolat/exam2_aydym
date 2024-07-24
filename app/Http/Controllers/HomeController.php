@@ -19,16 +19,11 @@ class HomeController extends Controller
             ->orderBy('name')
             ->get();
 
-        $songs = Song::with('artists','albums','gneres')
-            ->inRandomOrder()
-            ->get();
-
 
         return view('home.index')
             ->with([
                 'artists' => $artists,
                 'genres' => $genres,
-                'songs' => $songs,
             ]);
     }
 }
