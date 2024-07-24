@@ -9,6 +9,11 @@ class Artist extends Model
 {
     use HasFactory;
 
+    protected $guarded = [
+        'id',
+    ];
+
+
     public function albums()
     {
         return $this->hasMany(Album::class);
