@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Artist;
 use App\Models\Genre;
+use App\Models\Song;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -18,13 +19,16 @@ class HomeController extends Controller
             ->orderBy('name')
             ->get();
 
+        $songs = Song::with('artists','albums','gneres')
+            ->inRandomOrder()
+            ->get();
 
 
         return view('home.index')
             ->with([
-                'brands' => $artists,
-                'popular' => $genres,
-                'discount' => $discount,
+                'artists' => $artists,
+                'genres' => $genres,
+                'songs' => $songs,
             ]);
     }
 }
