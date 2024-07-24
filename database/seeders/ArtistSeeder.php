@@ -15,10 +15,10 @@ class ArtistSeeder extends Seeder
     {
         $artists = [
 
-            'Michael Jackson',
-            'Madonna',
-            'Eminem',
-            'Daft Punk'
+            'Playlist1',
+            'Playlist2',
+            'Playlist3',
+            'Playlist4'
 
         ];
 

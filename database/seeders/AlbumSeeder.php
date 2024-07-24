@@ -16,16 +16,16 @@ class AlbumSeeder extends Seeder
     {
         $artists = [
             ['name' => 'Michael Jackson', 'albums' => [
-                'MacBook Air', 'MacBook Pro', 'iMac',
+
             ]],
             ['name' => 'Madonna', 'albums' => [
-                'TUF', 'ROG', 'Zenbook', 'Vivobook',
+
             ]],
             ['name' => 'Eminem', 'albums' => [
-                'Predator', 'Nitro', 'Aspire', 'Swift',
+
             ]],
             ['name' => 'Ceza', 'albums' => [
-                'ThinkPad', 'Yoga', 'LOQ', 'IdeaPad',
+
             ]],
         ];
         for ($i = 0; $i < count($artists); $i++) {

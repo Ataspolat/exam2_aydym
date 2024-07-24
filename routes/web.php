@@ -4,19 +4,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Controllers\SongController;
 use Illuminate\Support\Facades\Route;
 
-Route::controller(HomeController::class)
-    ->group(function () {
-        Route::get('', 'index')->name('home');
-    });
 
-Route::controller(SongController::class)
-    ->prefix('s')
-    ->name('s.')
-    ->group(function () {
-        Route::get('', 'index')->name('index');
-        Route::get('compare', 'compare')->name('compare');
-        Route::get('{id}', 'show')->name('show')->where(['id' => '[0-9]+']);
-    });
 
 
 //Route::get('', 'index')->name('index'); // all objects
