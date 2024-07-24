@@ -14,14 +14,14 @@ class GenreSeeder extends Seeder
     public function run(): void
     {
         $genres = [
-            ['name' => 'Pop'],
-            ['name' => 'Rock'],
-            ['name' => 'Hip-Hop'],
-            ['name' => 'Electronic'],
+            'Pop',
+            'Rock',
+            'Hip-Hop',
+            'Electronic'
         ];
 
         foreach ($genres as $genre) {
-            Genre::create($genre);
+            Genre::create(['name' =>  $genre]);
         }
     }
 }

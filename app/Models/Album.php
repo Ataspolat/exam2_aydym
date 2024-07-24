@@ -13,7 +13,7 @@ class Album extends Model
         'id',
     ];
 
-
+    public $timestamps = false;
 
     public function artist()
     {

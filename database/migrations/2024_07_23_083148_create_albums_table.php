@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('albums', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
+            $table->string('name');
 
             $table->foreignId('artist_id')->constrained()->cascadeOnDelete();
 

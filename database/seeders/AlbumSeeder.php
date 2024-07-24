@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Album;
+use App\Models\Artist;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -14,14 +15,14 @@ class AlbumSeeder extends Seeder
     public function run(): void
     {
         $albums = [
-            ['name' => 'album1'],
-            ['name' => 'album2'],
-            ['name' => 'album3'],
-            ['name' => 'album4'],
+            'album1',
+            'album2',
+            'album3',
+            'album4',
         ];
 
         foreach ($albums as $album) {
-            Album::create($album);
+            Album::create(['name' =>  $album,]);
         }
     }
 }

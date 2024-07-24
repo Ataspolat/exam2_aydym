@@ -14,16 +14,16 @@ class ArtistSeeder extends Seeder
     public function run(): void
     {
         $artists = [
-            ['name' => 'Michael Jackson'],
-            ['name' => 'Madonna'],
-            ['name' => 'Eminem'],
-            ['name' => 'Daft Punk'],
+            'Michael Jackson',
+            'Madonna',
+            'Eminem',
+            'Daft Punk'
 
         ];
 
 
         foreach ($artists as $artist) {
-            Artist::create($artist);
+            Artist::create(['name' =>  $artist]);
         }
     }
 }
