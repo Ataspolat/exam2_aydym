@@ -2,8 +2,10 @@
 
 namespace Database\Seeders;
 
+use App\Models\Album;
+use App\Models\Artist;
 use App\Models\User;
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -13,11 +15,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
+        $this->call([
+            AlbumSeeder::class,
+            ArtistSeeder::class,
+            GenreSeeder::class,
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
         ]);
+
     }
 }
